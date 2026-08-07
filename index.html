@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Admin Panel</h1>
-    <p>Site başarıyla çalışıyor.</p>
+
+<div class="sidebar">
+
+    <h2>ADMIN</h2>
+
+    <ul>
+        <li class="active">Dashboard</li>
+        <li>Kullanıcılar</li>
+        <li>Banlananlar</li>
+        <li>Ayarlar</li>
+    </ul>
+
+</div>
+
+<div class="content">
+
+    <header>
+
+        <h1>Dashboard</h1>
+
+        <input type="text" placeholder="Kullanıcı Ara...">
+
+    </header>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Toplam Kullanıcı</h3>
+            <span id="totalUsers">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Banlanan</h3>
+            <span id="bannedUsers">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Aktif</h3>
+            <span id="activeUsers">0</span>
+        </div>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Kullanıcı</th>
+                <th>Durum</th>
+                <th>İşlem</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="userTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
