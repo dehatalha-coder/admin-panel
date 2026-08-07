@@ -1,77 +1,91 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
 
 <div class="sidebar">
 
-    <h2>ADMIN</h2>
+    <h2><i class="fa-solid fa-shield-halved"></i> ADMIN</h2>
 
     <ul>
-        <li class="active">Dashboard</li>
-        <li>Kullanıcılar</li>
-        <li>Banlananlar</li>
-        <li>Ayarlar</li>
+        <li class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+        <li><i class="fa-solid fa-users"></i> Kullanıcılar</li>
+        <li><i class="fa-solid fa-ban"></i> Banlananlar</li>
+        <li><i class="fa-solid fa-gear"></i> Ayarlar</li>
     </ul>
 
 </div>
 
 <div class="content">
 
-    <header>
+<header>
 
-        <h1>Dashboard</h1>
+    <h1>Dashboard</h1>
 
-        <input type="text" placeholder="Kullanıcı Ara...">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Kullanıcı Ara..."
+    >
 
-    </header>
+</header>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>Toplam Kullanıcı</h3>
-            <span id="totalUsers">0</span>
-        </div>
-
-        <div class="card">
-            <h3>Banlanan</h3>
-            <span id="bannedUsers">0</span>
-        </div>
-
-        <div class="card">
-            <h3>Aktif</h3>
-            <span id="activeUsers">0</span>
-        </div>
-
+    <div class="card">
+        <h3>Toplam Kullanıcı</h3>
+        <span id="totalUsers">0</span>
     </div>
 
-    <table>
+    <div class="card">
+        <h3>Banlanan</h3>
+        <span id="bannedUsers">0</span>
+    </div>
 
-        <thead>
+    <div class="card">
+        <h3>Aktif</h3>
+        <span id="activeUsers">0</span>
+    </div>
 
-            <tr>
+</div>
 
-                <th>ID</th>
-                <th>Kullanıcı</th>
-                <th>Durum</th>
-                <th>İşlem</th>
+<table>
 
-            </tr>
+<thead>
 
-        </thead>
+<tr>
 
-        <tbody id="userTable">
+<th>ID</th>
+<th>Kullanıcı</th>
+<th>E-Posta</th>
+<th>HWID</th>
+<th>Durum</th>
+<th>Kayıt Tarihi</th>
+<th>İşlem</th>
 
-        </tbody>
+</tr>
 
-    </table>
+</thead>
+
+<tbody id="userTable">
+
+<tr>
+
+<td colspan="7" style="text-align:center;padding:40px;color:#888;">
+Henüz kayıtlı kullanıcı bulunmuyor.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </div>
 
